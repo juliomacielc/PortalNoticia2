@@ -1,0 +1,37 @@
+.logo img{
+    max-width: 125px;
+}
+li a{
+    text-align: center;
+}
+.menu-itens a:hover{
+    background-color: rgb(179, 95, 95);
+    color: white!important;
+    border-radius: 5px;
+}
+.menu-home{
+    padding-right: 20px!important;
+    padding-left: 20px!important;
+}
+.active{
+    background-color: rgb(179, 95, 95);
+    color: white!important;
+    border-radius: 5px;
+    padding-right: 30px ;
+
+}
+.menu-itens a{
+    padding-left: 20px;
+}
+
+
+
+
+
+body {
+    background-color:rgb(247, 242, 242)
+}
+.conteudo {
+    background-color: white;
+    border-radius: 10px;
+}
