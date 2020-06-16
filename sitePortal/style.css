@@ -1,9 +1,6 @@
 .logo img{
     max-width: 125px;
 }
-header{
-    margin-bottom: 20px;
-}
 li a{
     text-align: center;
 }
@@ -16,9 +13,9 @@ li a{
     padding-right: 20px!important;
     padding-left: 20px!important;
 }
-.actived{
+.active{
     background-color: rgb(179, 95, 95);
-    color: white!important; 
+    color: white!important;
     border-radius: 5px;
     padding-right: 30px ;
 
@@ -26,79 +23,15 @@ li a{
 .menu-itens a{
     padding-left: 20px;
 }
-.menu-itens{
-    margin-top: 15px;
-}
 
 
 
 
 
 body {
-    background-color:rgb(247, 242, 242);
-    font-family: Arial, Helvetica, sans-serif;
+    background-color:rgb(247, 242, 242)
 }
-.conteudo{
+.conteudo {
+    background-color: white;
     border-radius: 10px;
-    background-color: #fff;
-    padding: 30px;
-    position: relative;
-    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
-}
-.fontes{
-    background-color:rgb(247, 242, 242);
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
-
-}
-.active {
-    background-color: rgb(179, 95, 95)!important;
-    color: white!important; 
-    border-radius: 5px;
- 
-
-}
-.menu-fonte a{
-    color: rgb(121, 109, 109);
-    text-align: center;
-}
-.menu-fonte{
-    background-color: rgb(247, 242, 242);
-    padding: 20px ;
-    border-radius: 10px;
-    
-}
-.notes .active{
-    background-color: white!important;
-    color: dimgray!important;
-}
-
-h3 {
-    text-align: center;
-    padding: 20px;
-    color: rgb(116, 7, 7);
-}
-
-.box-news h4{
-    color:rgb(155, 18, 18);
-}
-.box-news h5{
-    color: rgb(214, 3, 3);
-}
-.box-news{
-    border-top: rgb(247, 230, 230) solid 0.2px;
-    padding-top: 30px;
-    position: relative;
-}
-.box-news img{
-    display: block;
-    max-width: 100%;
-    margin-bottom: 15px;
-}
-
-
-footer{
-    text-align: center;
-    padding: 30px;
 }
