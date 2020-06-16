@@ -15,7 +15,6 @@ li a{
     padding-right: 20px!important;
     padding-left: 20px!important;
 }
-<<<<<<< HEAD
 .menu-fonte .active{
     background-color: rgb(179, 95, 95)!important;
     color: white!important;
@@ -28,9 +27,11 @@ li a{
     color: dimgray;
 }
 .menu-fonte{
+    margin-top: 20px;
+    margin-bottom: 20px;
     border-radius: 10px;
-    background-color:rgb(247, 242, 242);
     padding: 20px;
+    background-color:rgb(247, 242, 242);
 }
 
 .menu-itens a{
@@ -38,6 +39,7 @@ li a{
 }
 
 img {
+
     max-width: 100%;
 }
 
@@ -66,7 +68,6 @@ h3 {
 }
 .box-news img{
     display: block;
-    max-width: 100%;
     margin-bottom: 15px;
 }
 
@@ -74,7 +75,7 @@ h3 {
 footer{
     text-align: center;
     padding: 30px;
-=======
+}
 .active{
     background-color: rgb(179, 95, 95);
     color: white!important;
@@ -86,15 +87,19 @@ footer{
     padding-left: 20px;
 }
 
-
-
-
-
 body {
-    background-color:rgb(247, 242, 242)
->>>>>>> parent of 50a767e... Interface
+    background-color:rgb(247, 242, 242);
 }
 .conteudo {
     background-color: white;
     border-radius: 10px;
+}
+
+
+
+@media screen and (min-width: 996px){
+    img {
+        max-height: 340px !important;
+        
+    }
 }

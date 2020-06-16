@@ -1,0 +1,79 @@
+var id ='';
+function exibeNoticias () {
+    let divTela = document.getElementById(id);
+    let texto = '';
+
+    // Montar texto HTML das noticias
+    let dados = JSON.parse (this.responseText);
+    for (i=0; i< dados.articles.length; i++) {
+        let noticia = dados.articles[i];
+        let data = new Date (noticia.publishedAt);
+
+        texto = texto + `       
+            <div class="row box-news">
+            <div class="col-12 col-lg-4">
+                <img src="${noticia.urlToImage}"
+                    alt="">
+            </div>
+            <div class="col-12 col-lg-8">
+                <h4>${noticia.title}</h4>
+                <h5>${data.toLocaleDateString ()} - Fonte: ${noticia.source.name}</h5>
+                <p>${noticia.content} <a href="${noticia.url}" target="_blanc">Leia Mais...</a>
+                </p>
+            </div>  
+            </div> 
+        `;
+    };
+
+    // Preencher a DIV com o texto HTML
+    divTela.innerHTML = texto;
+}
+
+onload = () => {
+   
+    let xhr = new XMLHttpRequest ();
+    xhr.onload  = exibeNoticias;
+    xhr.open ('GET', `https://newsapi.org/v2/top-headlines?country=br&apiKey=4d06854944e94e18997725ab852d67d7`);
+    xhr.send ();
+    id='tela';
+    
+}
+
+function globo () {
+    let xhr = new XMLHttpRequest ();
+    id = 'telaGlobo';
+    xhr.onload = exibeNoticias;
+    xhr.open ('GET', `https://newsapi.org/v2/top-headlines?sources=globo&apiKey=4d06854944e94e18997725ab852d67d7`);
+    xhr.send ();
+}
+function uol () {
+    let xhr = new XMLHttpRequest ();
+    id = 'telaUol';
+    xhr.onload = exibeNoticias;
+    xhr.open ('GET', `https://newsapi.org/v2/everything?domains=uol.com.br&apiKey=4d06854944e94e18997725ab852d67d7`);
+    xhr.send ();
+}
+function r7 () {
+ 
+    let xhr = new XMLHttpRequest ();
+    id = 'telaR7';
+    xhr.onload = exibeNoticias;
+    xhr.open ('GET', `https://newsapi.org/v2/everything?domains=r7.com&apiKey=4d06854944e94e18997725ab852d67d7`);
+    xhr.send ();
+}
+function tecmundo () {
+  
+    let xhr = new XMLHttpRequest ();
+    id = 'telaTec';
+    xhr.onload = exibeNoticias;
+    xhr.open ('GET', `https://newsapi.org/v2/everything?domains=tecmundo.com.br&apiKey=4d06854944e94e18997725ab852d67d7`);
+    xhr.send ();
+}
+
+
+
+
+document.getElementById('btglobo').addEventListener('click', globo);
+document.getElementById('btuol').addEventListener('click', uol);
+document.getElementById('btr7').addEventListener('click', r7);
+document.getElementById('bttec').addEventListener('click', tecmundo);

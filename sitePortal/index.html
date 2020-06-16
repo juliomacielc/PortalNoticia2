@@ -15,12 +15,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-<<<<<<< HEAD
-
     <!-- JavaScript-->
-    <script src="app.js"></script>
-=======
->>>>>>> parent of 50a767e... Interface
 
     <title>Portal de Notícias</title>
 </head>
@@ -33,7 +28,7 @@
         <div class="row">
             <div class="col-12">
                 <nav class="navbar navbar-expand-lg navbar-light menu">
-                    <a class="logo" href="#"><img src="logo1.png" alt=""></a>
+                    <a class="logo" id="logo" href="#"><img src="logo1.png" alt=""></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -57,7 +52,7 @@
                                 <a class="nav-link" href="#">Loja Online</a>
                             </li>
                         </ul>
-                        
+
                         <form class="form-inline my-2 my-lg-0">
                             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                         </form>
@@ -71,84 +66,67 @@
     </header>
 
     <main class="container conteudo">
-        <h1>Hello, world!</h1>
-<<<<<<< HEAD
-    <main class="container">
         <div class="conteudo">
             <div class="row">
-                <div class="col-12">
-                    <div class="row">
-                        <div class="col-12 col-lg-2 ">
-                          <div class="nav flex-column menu-fonte nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                            <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Todos</a>
-                            <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Globo</a>
-                            <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">UOL</a>
-                            <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">R7</a>
-                            <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-tecmundo" role="tab" aria-controls="v-pills-settings" aria-selected="false">TecMundo</a>
-                          </div>
-                        </div>
-                        <div class="col-12 col-lg-10 notes">
-                          <div class="tab-content" id="v-pills-tabContent">
-                            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                                <h3>Principais notícias do Brasil</h3>
-                             
-                                <div class="row box-news">
-                                    <div class="col-12 col-lg-4">
-                                       <img src="https://cdn.cnn.com/cnnnext/dam/assets/200611140346-mcenany-june-11-white-house-super-tease.jpg" alt="">
-                                    </div>
-                                    <div class="col-12 col-lg-8">
-                                        <h4>Lorem ipsum dolor sit amet.</h4>
-                                        <h5>08/09/2019 - Fonte: Globo</h5>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore voluptatem eveniet, blanditiis assumenda temporibus ut dolor nihil ipsam tempora iusto. Corrupti accusantium culpa, labore reiciendis alias cumque necessitatibus odit totam. <a href="#">Leia Mais...</a>
-                                        </p> 
-                                    </div>
-
-                                </div>
-                                <div class="row box-news">
-                                    <div class="col-4">
-                                       <img src="https://picsum.photos/240/160" alt="">
-                                    </div>
-                                    <div class="col-8">
-                                        <h4>Lorem ipsum dolor sit amet.</h4>
-                                        <h5>08/09/2019 - Fonte: Globo</h5>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore voluptatem eveniet, blanditiis assumenda temporibus ut dolor nihil ipsam tempora iusto. Corrupti accusantium culpa, labore reiciendis alias cumque necessitatibus odit totam. <a href="#">Leia Mais...</a>
-                                        </p> 
-                                    </div>
-                                </div>
-                                <div class="row box-news">
-                                    <div class="col-4">
-                                       <img src="https://picsum.photos/240/160" alt="">
-                                    </div>
-                                    <div class="col-8">
-                                        <h4>Lorem ipsum dolor sit amet.</h4>
-                                        <h5>08/09/2019 - Fonte: Globo</h5>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore voluptatem eveniet, blanditiis assumenda temporibus ut dolor nihil ipsam tempora iusto. Corrupti accusantium culpa, labore reiciendis alias cumque necessitatibus odit totam. <a href="#">Leia Mais...</a>
-                                        </p> 
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab"><h3>Globo</h3>
-                        
-                            
-                            
-                            </div>
-                            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"><h3>UOL</h3></div>
-                            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab"><h3>R7</h3></div>
-                            <div class="tab-pane fade" id="v-pills-tecmundo" role="tabpanel" aria-labelledby="v-pills-settings-tab"><h3>TecMundo</h3></div>
-                          </div>
-                        </div>
-                      </div>
+                <div class="col-12 col-lg-2 ">
+                    <div class="nav flex-column menu-fonte nav-pills" id="v-pills-tab" role="tablist"
+                        aria-orientation="vertical">
+                        <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
+                            role="tab" aria-controls="v-pills-home" aria-selected="true">Todos</a>
+                        <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile"
+                            role="tab" aria-controls="v-pills-profile" aria-selected="false"><span id="btglobo">Globo</span></a>
+                        <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages"
+                            role="tab" aria-controls="v-pills-messages" aria-selected="false"><span id="btuol">UOL</span> </a>
+                        <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings"
+                            role="tab" aria-controls="v-pills-settings" aria-selected="false"><span id="btr7">R7</span></a>
+                        <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-tecmundo"
+                            role="tab" aria-controls="v-pills-settings" aria-selected="false"><span id="bttec">TecMundo</span></a>
+                    </div>
                 </div>
+                <div class="col-12 col-lg-10 notes">
+                    <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                            aria-labelledby="v-pills-home-tab">
+                            <h3>Principais notícias do Brasil</h3>
+                            <div id="tela">
+
+                            </div>
+                        </div>   
+                            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                                aria-labelledby="v-pills-profile-tab">
+                                <h3>Globo</h3>
+                           
+                                <div id="telaGlobo">
+                                </div>
+
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                                aria-labelledby="v-pills-messages-tab">
+                                <h3>UOL</h3>
+                                <div id="telaUol">
+
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
+                                aria-labelledby="v-pills-settings-tab">
+                                <h3>R7</h3>
+                                <div id="telaR7">
+
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-tecmundo" role="tabpanel"
+                                aria-labelledby="v-pills-settings-tab">
+                                <h3>TecMundo</h3>
+                                <div id="telaTec">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
     </main>
-
-
-=======
-
-    </main>
-
->>>>>>> parent of 50a767e... Interface
 
 
 
@@ -165,6 +143,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
