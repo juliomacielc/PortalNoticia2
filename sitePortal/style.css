@@ -25,6 +25,7 @@ li a{
 }
 .menu-fonte a{
     color: dimgray;
+    text-align: center;
 }
 .menu-fonte{
     margin-top: 20px;
@@ -100,6 +101,5 @@ body {
 @media screen and (min-width: 996px){
     img {
         max-height: 340px !important;
-        
     }
 }

@@ -1,13 +1,17 @@
-var id ='';
-function exibeNoticias () {
+var id = '';
+var firstGlobo=true;
+var firstr7=true;
+var firstUol=true;
+var firsttec = true;
+function exibeNoticias() {
     let divTela = document.getElementById(id);
     let texto = '';
 
     // Montar texto HTML das noticias
-    let dados = JSON.parse (this.responseText);
-    for (i=0; i< dados.articles.length; i++) {
+    let dados = JSON.parse(this.responseText);
+    for (i = 0; i < dados.articles.length; i++) {
         let noticia = dados.articles[i];
-        let data = new Date (noticia.publishedAt);
+        let data = new Date(noticia.publishedAt);
 
         texto = texto + `       
             <div class="row box-news">
@@ -17,7 +21,7 @@ function exibeNoticias () {
             </div>
             <div class="col-12 col-lg-8">
                 <h4>${noticia.title}</h4>
-                <h5>${data.toLocaleDateString ()} - Fonte: ${noticia.source.name}</h5>
+                <h5>${data.toLocaleDateString()} - Fonte: ${noticia.source.name}</h5>
                 <p>${noticia.content} <a href="${noticia.url}" target="_blanc">Leia Mais...</a>
                 </p>
             </div>  
@@ -30,44 +34,54 @@ function exibeNoticias () {
 }
 
 onload = () => {
-   
-    let xhr = new XMLHttpRequest ();
-    xhr.onload  = exibeNoticias;
-    xhr.open ('GET', `https://newsapi.org/v2/top-headlines?country=br&apiKey=4d06854944e94e18997725ab852d67d7`);
-    xhr.send ();
-    id='tela';
-    
+
+    let xhr = new XMLHttpRequest();
+    xhr.onload = exibeNoticias;
+    xhr.open('GET', `https://newsapi.org/v2/top-headlines?country=br&apiKey=4d06854944e94e18997725ab852d67d7`);
+    xhr.send();
+    id = 'tela';
+
 }
 
-function globo () {
-    let xhr = new XMLHttpRequest ();
-    id = 'telaGlobo';
-    xhr.onload = exibeNoticias;
-    xhr.open ('GET', `https://newsapi.org/v2/top-headlines?sources=globo&apiKey=4d06854944e94e18997725ab852d67d7`);
-    xhr.send ();
+function globo() {
+    if (firstGlobo) {
+        let xhr = new XMLHttpRequest();
+        id = 'telaGlobo';
+        xhr.onload = exibeNoticias;
+        xhr.open('GET', `https://newsapi.org/v2/top-headlines?sources=globo&apiKey=4d06854944e94e18997725ab852d67d7`);
+        xhr.send();
+        firstGlobo = false;
+    }
 }
-function uol () {
-    let xhr = new XMLHttpRequest ();
-    id = 'telaUol';
-    xhr.onload = exibeNoticias;
-    xhr.open ('GET', `https://newsapi.org/v2/everything?domains=uol.com.br&apiKey=4d06854944e94e18997725ab852d67d7`);
-    xhr.send ();
+function uol() {
+    if (firstUol) {
+        let xhr = new XMLHttpRequest();
+        id = 'telaUol';
+        xhr.onload = exibeNoticias;
+        xhr.open('GET', `https://newsapi.org/v2/everything?domains=uol.com.br&apiKey=4d06854944e94e18997725ab852d67d7`);
+        xhr.send();
+        irstUol = false;
+    }
 }
-function r7 () {
- 
-    let xhr = new XMLHttpRequest ();
-    id = 'telaR7';
-    xhr.onload = exibeNoticias;
-    xhr.open ('GET', `https://newsapi.org/v2/everything?domains=r7.com&apiKey=4d06854944e94e18997725ab852d67d7`);
-    xhr.send ();
+function r7() {
+    if (firstr7) {
+        let xhr = new XMLHttpRequest();
+        id = 'telaR7';
+        xhr.onload = exibeNoticias;
+        xhr.open('GET', `https://newsapi.org/v2/everything?domains=r7.com&apiKey=4d06854944e94e18997725ab852d67d7`);
+        xhr.send();
+        firstr7 = false;
+    }
 }
-function tecmundo () {
-  
-    let xhr = new XMLHttpRequest ();
-    id = 'telaTec';
-    xhr.onload = exibeNoticias;
-    xhr.open ('GET', `https://newsapi.org/v2/everything?domains=tecmundo.com.br&apiKey=4d06854944e94e18997725ab852d67d7`);
-    xhr.send ();
+function tecmundo() {
+    if (firsttec) {
+        let xhr = new XMLHttpRequest();
+        id = 'telaTec';
+        xhr.onload = exibeNoticias;
+        xhr.open('GET', `https://newsapi.org/v2/everything?domains=tecmundo.com.br&apiKey=4d06854944e94e18997725ab852d67d7`);
+        xhr.send();
+        firsttec = false;
+    }
 }
 
 
