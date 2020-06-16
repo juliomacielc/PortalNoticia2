@@ -10,26 +10,69 @@ li a{
     border-radius: 5px;
 }
 .menu-home{
+    background-color: rgb(179, 95, 95)!important;
+    color: white!important;
     padding-right: 20px!important;
     padding-left: 20px!important;
 }
-.active{
-    background-color: rgb(179, 95, 95);
+.menu-fonte .active{
+    background-color: rgb(179, 95, 95)!important;
     color: white!important;
-    border-radius: 5px;
-    padding-right: 30px ;
-
+    padding-right: 30px;
 }
+.active{
+    border-radius: 5px;
+}
+.menu-fonte a{
+    color: dimgray;
+}
+.menu-fonte{
+    border-radius: 10px;
+    background-color:rgb(247, 242, 242);
+    padding: 20px;
+}
+
 .menu-itens a{
     padding-left: 20px;
 }
 
+img {
+    max-width: 100%;
+}
 
 
+.notes .active{
+    background-color: white!important;
+    color: dimgray!important;
+}
+
+h3 {
+    text-align: center;
+    padding: 20px;
+    color: rgb(116, 7, 7);
+}
+
+.box-news h4{
+    color:rgb(155, 18, 18);
+}
+.box-news h5{
+    color: rgb(214, 3, 3);
+}
+.box-news{
+    border-top: rgb(247, 230, 230) solid 0.2px;
+    padding-top: 30px;
+    position: relative;
+}
+.box-news img{
+    display: block;
+    max-width: 100%;
+    margin-bottom: 15px;
+}
 
 
-body {
-    background-color:rgb(247, 242, 242)
+footer{
+    text-align: center;
+    padding: 30px;
 }
 .conteudo {
     background-color: white;
