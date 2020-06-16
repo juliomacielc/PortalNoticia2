@@ -15,6 +15,7 @@ li a{
     padding-right: 20px!important;
     padding-left: 20px!important;
 }
+<<<<<<< HEAD
 .menu-fonte .active{
     background-color: rgb(179, 95, 95)!important;
     color: white!important;
@@ -73,6 +74,25 @@ h3 {
 footer{
     text-align: center;
     padding: 30px;
+=======
+.active{
+    background-color: rgb(179, 95, 95);
+    color: white!important;
+    border-radius: 5px;
+    padding-right: 30px ;
+
+}
+.menu-itens a{
+    padding-left: 20px;
+}
+
+
+
+
+
+body {
+    background-color:rgb(247, 242, 242)
+>>>>>>> parent of 50a767e... Interface
 }
 .conteudo {
     background-color: white;
