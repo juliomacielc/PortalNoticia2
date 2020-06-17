@@ -33,15 +33,16 @@ function exibeNoticias() {
     divTela.innerHTML = texto;
 }
 
-onload = () => {
+
 
     let xhr = new XMLHttpRequest();
     xhr.onload = exibeNoticias;
     xhr.open('GET', `https://newsapi.org/v2/top-headlines?country=br&apiKey=4d06854944e94e18997725ab852d67d7`);
     xhr.send();
     id = 'tela';
+    
 
-}
+
 
 function globo() {
     if (firstGlobo) {
@@ -60,7 +61,7 @@ function uol() {
         xhr.onload = exibeNoticias;
         xhr.open('GET', `https://newsapi.org/v2/everything?domains=uol.com.br&apiKey=4d06854944e94e18997725ab852d67d7`);
         xhr.send();
-        irstUol = false;
+        firstUol = false;
     }
 }
 function r7() {
@@ -87,7 +88,7 @@ function tecmundo() {
 
 
 
-document.getElementById('btglobo').addEventListener('click', globo);
-document.getElementById('btuol').addEventListener('click', uol);
-document.getElementById('btr7').addEventListener('click', r7);
-document.getElementById('bttec').addEventListener('click', tecmundo);
+document.getElementById('v-pills-profile-tab').addEventListener('click', globo);
+document.getElementById('v-pills-messages-tab').addEventListener('click', uol);
+document.getElementById('v-pills-settings-tab').addEventListener('click', r7);
+document.getElementById('v-pills-settings-tec').addEventListener('click', tecmundo);
