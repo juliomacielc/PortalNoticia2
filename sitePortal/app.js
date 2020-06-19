@@ -40,10 +40,8 @@ function exibeNoticias() {
     xhr.open('GET', `https://newsapi.org/v2/top-headlines?country=br&apiKey=4d06854944e94e18997725ab852d67d7`);
     xhr.send();
     id = 'tela';
-    
 
-
-
+ 
 function globo() {
     if (firstGlobo) {
         let xhr = new XMLHttpRequest();
