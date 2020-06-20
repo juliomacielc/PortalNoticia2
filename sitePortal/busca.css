@@ -1,0 +1,18 @@
+.logoBusca img {
+    width: 100px;
+    margin-top: -60px;
+}
+.logoBusca{
+    text-align: center;
+    margin: 20px 0;
+    color: #636060;
+}
+.conteudo{
+    padding: 25px;
+}
+
+.logo {
+    margin: 0 auto;
+    display: block;
+    align-items: center;
+}

@@ -1,6 +1,9 @@
 .logo img{
     max-width: 125px;
 }
+#busca {
+    margin-bottom: 20px;
+}
 li a{
     text-align: center;
 }
@@ -10,8 +13,6 @@ li a{
     border-radius: 5px;
 }
 .menu-home{
-    background-color: rgb(179, 95, 95)!important;
-    color: white!important;
     padding-right: 20px!important;
     padding-left: 20px!important;
 }
@@ -73,7 +74,9 @@ h3 {
     display: block;
     margin-bottom: 15px;
 }
-
+.fa {
+    margin-left: -55px ;
+}
 
 footer{
     text-align: center;

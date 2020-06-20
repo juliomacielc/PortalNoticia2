@@ -34,12 +34,13 @@ function exibeNoticias() {
 }
 
 
-
+window.onload = () =>{
     let xhr = new XMLHttpRequest();
     xhr.onload = exibeNoticias;
     xhr.open('GET', `https://newsapi.org/v2/top-headlines?country=br&apiKey=4d06854944e94e18997725ab852d67d7`);
     xhr.send();
     id = 'tela';
+}
 
  
 function globo() {
@@ -90,3 +91,11 @@ document.getElementById('v-pills-profile-tab').addEventListener('click', globo);
 document.getElementById('v-pills-messages-tab').addEventListener('click', uol);
 document.getElementById('v-pills-settings-tab').addEventListener('click', r7);
 document.getElementById('v-pills-settings-tec').addEventListener('click', tecmundo);
+
+
+const API_KEY = '4d06854944e94e18997725ab852d67d7';
+
+busca.onsubmit = (evento) =>{
+   console.log ({pesquisa : txtPesquisa.value})
+   window.localStorage.setItem('txtPesquisa', txtPesquisa.value)
+}
