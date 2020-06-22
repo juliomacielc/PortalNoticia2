@@ -1,13 +1,15 @@
 onload = () =>{
-
-    txtPesquisa.value = localStorage.getItem('txtPesquisa');
+    txtPesquisa.value = sessionStorage.getItem('txtPesquisa');
     executaPesquisa();
+   
 }
+var query = '';
 
 function exibeNoticias() {
     let divTela = document.getElementById('tela');
-
+    let titulo = document.getElementById('titulo');
     let texto = '';
+    titulo.innerHTML = query;
 
     // Montar texto HTML das noticias
     let dados = JSON.parse(this.responseText);
@@ -30,14 +32,14 @@ function exibeNoticias() {
             </div> 
         `;
     };
-
+    localStorage.removeItem(txtPesquisa);
     // Preencher a DIV com o texto HTML
     divTela.innerHTML = texto;
 }
 
 
 function executaPesquisa () {
-    let query = document.getElementById('txtPesquisa').value;
+    query = document.getElementById('txtPesquisa').value;
     let xhr = new XMLHttpRequest ();
     xhr.onload = exibeNoticias;
     xhr.open ('GET', `https://newsapi.org/v2/everything?q=${query}&apiKey=4d06854944e94e18997725ab852d67d7`);
@@ -45,7 +47,15 @@ function executaPesquisa () {
 }
 
 busca.onsubmit = (evento) =>{
-    console.log ({pesquisa : txtPesquisa.value})
-    window.localStorage.setItem('txtPesquisa', txtPesquisa.value)
+    window.sessionStorage.setItem('txtPesquisa', txtPesquisa.value)
     executaPesquisa()
  }
+
+ salvaB = () =>{
+     console.log(txtPesquisa.value);
+     salvaPesquisa.value = txtPesquisa.value ;
+     pesquisaTitulo.focus();
+ }
+
+
+ document.getElementById ('salvaB').addEventListener ('click', salvaB);

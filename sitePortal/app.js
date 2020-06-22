@@ -97,5 +97,5 @@ const API_KEY = '4d06854944e94e18997725ab852d67d7';
 
 busca.onsubmit = (evento) =>{
    console.log ({pesquisa : txtPesquisa.value})
-   window.localStorage.setItem('txtPesquisa', txtPesquisa.value)
+   window.sessionStorage.setItem('txtPesquisa', txtPesquisa.value)
 }

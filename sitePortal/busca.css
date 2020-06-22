@@ -16,3 +16,19 @@
     display: block;
     align-items: center;
 }
+.buscaTitle{
+    display: inline;
+    color: dimgray!important;
+    font-size: 1.8rem;
+}
+.salvar {
+    margin-bottom: 10px;
+    background-color:rgb(247, 242, 242);
+    color:  rgb(179, 95, 95);
+    border: rgb(255, 0, 0) solid 0.2px;
+}
+.salvar:hover {
+
+    color:  rgb(247, 242, 242);
+    background-color: rgb(179, 95, 95);
+}

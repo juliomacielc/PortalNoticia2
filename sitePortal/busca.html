@@ -22,6 +22,38 @@
 </head>
 
 <body>
+    <!-- Modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Salvar pesquisa</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+                        <div class="form-group">
+                          <label for="formGroupExampleInput">Titulo no menu</label>
+                          <input type="text" class="form-control" id="pesquisaTitulo" name="pesquisaTitulo" placeholder="">
+                        </div>
+                        <div class="form-group">
+                          <label for="formGroupExampleInput2">Texto de pesquisa</label>
+                          <input type="text" class="form-control"  id="salvaPesquisa" placeholder="pesquisa...">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" name="salvaPesquisa" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                            <button type="button" class="btn btn-dark" data-dismiss="modal">Salvar</button>
+                        </div>
+                      </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Menu-->
 
@@ -37,7 +69,7 @@
                     <div class="collapse navbar-collapse menu-itens" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto ">
                             <li class="nav-item">
-                                <a class="nav-link active menu-home" href="#"><i class="fas fa-home"></i></a>
+                                <a class="nav-link menu-home" href="index.html"><i class="fas fa-home"></i></a>
                             </li>
                             <li class="nav-item" id="btesporte">
                                 <a class="nav-link" href="#">Esporte</a>
@@ -53,7 +85,7 @@
                             </li>
                         </ul>
                     </div>
-                    
+
                     <a class="logo " href="#"><img src="logo1.png" alt=""></a>
                 </nav>
 
@@ -66,16 +98,18 @@
     <main class="container conteudo">
         <div class="conteudo">
             <div class="row">
-                <div class="col-lg-3 col-12"> 
+                <div class="col-lg-3 col-12">
                     <h2 class="logoBusca"><img src="logo1.png" alt="">busca</h2>
                 </div>
                 <div class="col-lg-9 col-12">
                     <form id="busca" class="form-inline justify-content-center">
-                        <input class="form-control form-control-md mr-2 w-75" type="text" id="txtPesquisa" name="txtPesquisa" placeholder="Search"
-                          aria-label="Search">
+                        <input class="form-control form-control-md mr-2 w-75" type="text" id="txtPesquisa"
+                            name="txtPesquisa" placeholder="Search" aria-label="Search">
                         <i class="fas fa-search" aria-hidden="true"></i>
-                      </form>
+                    </form>
                 </div>
+                <h2 class="buscaTitle"> Resultados da busca "<span id="titulo"></span>": </h2>
+    <button type="button" class="btn salvar" id="salvaB" data-toggle="modal" data-target="#exampleModal">Salvar pesquisa</button>
                 <div id="tela">
 
                 </div>
@@ -83,6 +117,7 @@
         </div>
 
     </main>
+   
 
     <footer>
         &copy; - Todos os direitos reservados - 2020
