@@ -1,9 +1,16 @@
 onload = () =>{
     txtPesquisa.value = sessionStorage.getItem('txtPesquisa');
     executaPesquisa();
-   
+
+    var db_salvar=JSON.parse(localStorage.setItem('dbPesquisa'));
+    if(!db_salvar){
+        db_salvar = {
+            "data": []
+        }
+    }
 }
 var query = '';
+
 
 function exibeNoticias() {
     let divTela = document.getElementById('tela');
@@ -54,8 +61,17 @@ busca.onsubmit = (evento) =>{
  salvaB = () =>{
      console.log(txtPesquisa.value);
      salvaPesquisa.value = txtPesquisa.value ;
-     pesquisaTitulo.focus();
+     salvaNome.focus();
  }
 
+ btnSalvar.onclick = () =>{
+    let campoNome = salvaNome.value
+    let campoValor = salvaPesquisa.value
+    let pesquisaSalva = { nome: campoNome,
+        texto: campoValor
+    };
+    db_salvar.data.push(pesquisaSalva);
+    localStorage.setItem('dbPesquisa', JSON.stringify(db_salvar))
+ }
 
  document.getElementById ('salvaB').addEventListener ('click', salvaB);
