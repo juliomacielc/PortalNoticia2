@@ -37,23 +37,24 @@
 
                     <form>
                         <div class="form-group">
-                          <label for="formGroupExampleInput">Titulo no menu</label>
-                          <input type="text" class="form-control" id="salvaNome" name="pesquisaTitulo" placeholder="">
+                            <label for="formGroupExampleInput">Titulo no menu</label>
+                            <input type="text" class="form-control" id="salvaNome" name="pesquisaTitulo" placeholder="">
                         </div>
                         <div class="form-group">
-                          <label for="formGroupExampleInput2">Texto de pesquisa</label>
-                          <input type="text" class="form-control"  id="salvaPesquisa" placeholder="pesquisa...">
+                            <label for="formGroupExampleInput2">Texto de pesquisa</label>
+                            <input type="text" class="form-control" id="salvaPesquisa" placeholder="pesquisa...">
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
-                            <button type="button" class="btn btn-dark" id="btnSalvar" name="btnSalvar" data-dismiss="modal">Salvar</button>
+                            <button type="button" class="btn btn-dark" id="btnSalvar" name="btnSalvar"
+                                data-dismiss="modal">Salvar</button>
                         </div>
-                      </form>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-
+    
 
     <!-- Menu-->
 
@@ -72,10 +73,10 @@
                                 <a class="nav-link menu-home" href="index.html"><i class="fas fa-home"></i></a>
                             </li>
                             <li class="nav-item" id="btesporte">
-                                <a class="nav-link" href="#">Esporte</a>
+                                <a class="nav-link" href="?txtPesquisa=Esporte">Esporte</a>
                             </li>
                             <li class="nav-item" id="bttecnologia">
-                                <a class="nav-link" href="#">Tecnologia</a>
+                                <a class="nav-link" href="?txtPesquisa=Tecnologia">Tecnologia</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Quem somos</a>
@@ -108,16 +109,45 @@
                         <i class="fas fa-search" aria-hidden="true"></i>
                     </form>
                 </div>
-                <h2 class="buscaTitle"> Resultados da busca "<span id="titulo"></span>": </h2>&nbsp; 
-    <button type="button" class="btn salvar" id="salvaB" data-toggle="modal" data-target="#exampleModal">Salvar pesquisa</button>
-                <div id="tela">
-
-                </div>
+                <h2 class="buscaTitle"> Resultados da busca "<span id="titulo"></span>": </h2>&nbsp;
+                <button type="button" class="btn salvar" id="salvaB" data-toggle="modal"
+                    data-target="#exampleModal">Salvar pesquisa</button>
             </div>
+            <div class="row">
+                <div class="col-12 col-lg-9">
+                    
+
+                    <div id="tela">
+
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <div class="card btnCollapse">
+                        <button type="button" class="btn pesquisasBtn  " data-toggle="collapse"
+                            data-target="#demo">Pesquisas salvas</button>
+                        <div id="demo" class="collapse.show">
+                            <nav id="listaPesquisa" class="nav flex-column">
+                                <div class="row itensSalvos">
+                                    <div class="col-12">
+                                        <a class="nav-link" href="#">Não há pesquisas salvas</a>
+                                    </div>
+                                </div>
+
+                            </nav>
+                        </div>
+                        
+                    </div>
+                        <button type="button" id="apagar" class="btn btn-light">Apagar lista de itens salvos</button>
+                </div>
+
+
+            </div>
+
+        </div>
         </div>
 
     </main>
-   
+
 
     <footer>
         &copy; - Todos os direitos reservados - 2020

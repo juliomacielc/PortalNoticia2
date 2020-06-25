@@ -30,7 +30,7 @@ li a{
 }
 .menu-fonte{
     margin: 10px;
-    margin-top: 30px;
+    margin-top: 10px;
     border-radius: 10px;
     padding: 10px;
     background-color:rgb(247, 242, 242);
@@ -100,7 +100,46 @@ body {
     background-color: white;
     border-radius: 10px;
 }
+.btnCollapse{
+    margin-top: 30px!important;
+    margin: 10px;
+    margin-bottom: 30px;
+}
+.btnCollapse a{
+    color: dimgray;
+    border-radius: 10px;
+    text-align: center;
+    padding: 12px;
+    
+}
+.pesquisasBtn {
+    background-color:rgb(179, 95, 95);
+    padding: 12px;
+    color: white;
+}
+.pesquisasBtn:hover {
+    background-color:rgb(185, 35, 35);
+    color: white;
+}
+.btnCollapse a:hover{
+    color: black;
+    background-color:rgb(211, 207, 207);
+}
+.card {
+    background-color: rgb(247, 242, 242);
+    border-radius: 10px;
+    border: none;
+}
 
+
+#apagar{
+    border: solid rgb(184, 184, 184) 1px;
+    color: white;
+    background-color: dimgray;
+    display: block;
+    margin: -25px auto 0 auto;
+    margin-bottom: 50px;
+}
 
 
 @media screen and (min-width: 996px){

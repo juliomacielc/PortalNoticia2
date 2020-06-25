@@ -3,6 +3,43 @@ var firstGlobo=true;
 var firstr7=true;
 var firstUol=true;
 var firsttec = true;
+var dbsalvar = JSON.parse(localStorage.getItem('dbPesquisa'));
+
+listaPesquisaSalva = () => {
+    let texto = '';
+    let divTela = document.getElementById('listaPesquisa');
+    if (!dbsalvar) {
+        dbsalvar = {
+
+            "data": [{
+
+            }]
+        }
+        texto = ` <div class="row itensSalvos">
+        <div class="col-12">
+            <a class="nav-link" href="#">Não há pesquisas salvas</a>
+        </div>
+    </div>`;
+    }
+    else {
+        for (i = 1; i < dbsalvar.data.length; i++) {
+            let dados = dbsalvar.data[i];
+            texto = texto + `   
+        <div class="row itensSalvos">
+        <div class="col-12"> 
+            <a class="nav-link" href="busca.html?txtPesquisa=${dados.texto}">${dados.nome}</a>
+        </div>
+       
+    </div>     
+        `;
+        };
+        divTela.innerHTML = texto;
+    }
+
+}
+
+
+
 function exibeNoticias() {
     let divTela = document.getElementById(id);
     let texto = '';
@@ -85,17 +122,25 @@ function tecmundo() {
 }
 
 
+apagar.onclick = () => {
+    localStorage.removeItem('dbPesquisa');
+    let divTela = document.getElementById('listaPesquisa');
+    let texto = ` <div class="row itensSalvos">
+    <div class="col-12">
+        <a class="nav-link" href="#">Não há pesquisas salvas</a>
+    </div>
+</div>`;
+    divTela.innerHTML=texto;
+    document.location.reload(true);
+    alert('Lista apagada com sucesso');
+}
+
 
 
 document.getElementById('v-pills-profile-tab').addEventListener('click', globo);
 document.getElementById('v-pills-messages-tab').addEventListener('click', uol);
 document.getElementById('v-pills-settings-tab').addEventListener('click', r7);
 document.getElementById('v-pills-settings-tec').addEventListener('click', tecmundo);
-
+listaPesquisaSalva();
 
 const API_KEY = '4d06854944e94e18997725ab852d67d7';
-
-busca.onsubmit = (evento) =>{
-   console.log ({pesquisa : txtPesquisa.value})
-   window.sessionStorage.setItem('txtPesquisa', txtPesquisa.value)
-}
